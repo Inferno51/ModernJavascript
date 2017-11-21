@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        
+        <script>
+            window.onload = function() {
+                const element = document.getElementById("multiply");
+                element.addEventListener('click', function() {element.value += '1'});
+                element.addEventListener('click', function() {element.value += '2'});
+            }
+
+        </script>
+
+        <input id="multiply" type="text" name="multiply"/>
+    </body>
+</html>

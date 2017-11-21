@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <div id="output"></div>
+    <button onclick="aTimeoutReference = setTimeout(customTimeOut, 3000)">
+        Alert after 3 seconds</button>
+    <button onclick="clearTimeout(aTimeoutReference)">Clear Timeout Alert</button>
+    <script>
+        const name = 'Jon Pack';
+
+        for (let i=0; i<=name.length; i++){
+            if(i % 2) {
+                console.log(name.slice(0,i));
+            } else {
+                console.log((name.slice(0,i)).toUpperCase());
+            }
+        }
+
+    </script>
+    </body>
+</html>

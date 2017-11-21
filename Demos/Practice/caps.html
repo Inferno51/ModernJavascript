@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+    </head>
+    <body>
+               
+        <script>
+            function upperCaseIt(str){
+                return str
+                    .toLowerCase()
+                    .split(' ')
+                    .map(function(word){
+                        return word[0].toUpperCase() + word.substr(1);
+                    })
+                    .join(' ');
+            }
+
+            function buttonClick(event){
+                let start = document.getElementById("sentence").value;
+                let target = document.getElementById("output");
+                let result = upperCaseIt(start);
+                console.log(result);
+                target.innerHTML = result;
+            }
+            
+        </script>
+
+        <form onsubmit="event.preventDefault();buttonClick()">
+            <label for="sentence">Enter a sentence </label>
+            <input id="sentence" type="text" name="sentence" />
+            <button onclick="buttonClick()">Click Me</button>
+        </form>
+
+        <div id="output"></div>
+
+    </body>
+</html>
